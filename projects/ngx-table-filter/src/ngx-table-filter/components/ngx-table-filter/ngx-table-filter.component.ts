@@ -15,6 +15,7 @@ export class NgxTableFilterComponent implements OnInit {
 
   @Input() items: any[] = [];
   @Input() options: INgxTableOptions = [];
+  @Input() exportCSV: boolean = true;
 
   constructor(private datePipe: DatePipe) {}
 

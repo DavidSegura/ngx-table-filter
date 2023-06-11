@@ -58,6 +58,33 @@ table.ngx-table-filter tbody.ngx-table-body tr:hover {
     background-color: rgba(244, 246, 249, .5);
 }
 
+.ngx-table-export {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    align-items: center;
+    padding: .5rem 0;
+}
+
+.ngx-table-export button {
+    display: inline-block;
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    border: 1px solid #0d6efd;
+    border-radius: .5rem;
+    background-color: #0d6efd;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    color: #fff;
+}
+.ngx-table-export button:hover {
+    color: #fff;
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
 @media only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px) {
 
