@@ -11,7 +11,9 @@
                 <div *ngIf="header.showFilter">
                     <ng-select [items]="itemsFilters[header.attr]" bindLabel="label" bindValue="value"
                         [multiple]="header.multiple ? header.multiple : false"
-                        (change)="onChangeFilter(header.attr, $event)">
+                        (change)="onChangeFilter(header.attr, $event)"
+                        [(ngModel)]="applyFilters[header.attr]"
+                        >
                     </ng-select>
                 </div>
             </th>
