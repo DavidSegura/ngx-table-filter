@@ -1,0 +1,110 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700);
+@import "~@ng-select/ng-select/themes/material.theme.css";
+
+:host {
+    --font-primary: "Montserrat", sans-serif;
+}
+
+table.ngx-table-filter {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, .15);
+    -moz-box-shadow: 0 0 40px 0 rgba(0, 0, 0, .15);
+    -webkit-box-shadow: 0 0 40px 0 rgba(0, 0, 0, .15);
+    -o-box-shadow: 0 0 40px 0 rgba(0, 0, 0, .15);
+    -ms-box-shadow: 0 0 40px 0 rgba(0, 0, 0, .15);
+    background-color: #fff;
+    font-family: var(--font-primary);
+}
+
+table.ngx-table-filter>thead.ngx-table-header {
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .1);
+    -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .1);
+}
+
+table.ngx-table-filter>thead.ngx-table-header tr th {
+    font-size: 18px;
+    color: rgba(0, 0, 0, .85);
+    line-height: 1.4;
+    background-color: transparent;
+    padding-top: 18px;
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+table.ngx-table-filter>thead.ngx-table-header tr th:first-child {
+    padding-left: 40px;
+}
+
+table.ngx-table-filter tbody.ngx-table-body tr td {
+    font-size: 15px;
+    color: gray;
+    line-height: 1.4;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-weight: unset;
+    padding-right: 10px;
+}
+
+table.ngx-table-filter tbody.ngx-table-body tr {
+    border-bottom: 1px solid #dfdfdf;
+}
+
+table.ngx-table-filter tbody.ngx-table-body tr td:first-child {
+    padding-left: 40px;
+}
+
+table.ngx-table-filter tbody.ngx-table-body tr:hover {
+    background-color: rgba(244, 246, 249, .5);
+}
+
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+
+    table.ngx-table-filter,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead.ngx-table-header tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #ccc;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    td:nth-of-type(1):before {
+        content: "Id";
+    }
+
+    td:nth-of-type(2):before {
+        content: "Obra";
+    }
+
+    td:nth-of-type(3):before {
+        content: "Centro de Reciclaje";
+    }
+}

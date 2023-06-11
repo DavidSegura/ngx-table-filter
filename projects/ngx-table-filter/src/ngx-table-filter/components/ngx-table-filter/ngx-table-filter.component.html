@@ -1,0 +1,27 @@
+<div class="ngx-table-export">
+    <button (click)="exportCsv()">
+        {{ 'Exportar CSV' }}
+    </button>
+</div>
+<table class="ngx-table-filter">
+    <thead class="ngx-table-header">
+        <tr>
+            <th *ngFor="let header of options">
+                {{ header.label }}
+                <div *ngIf="header.showFilter">
+                    <ng-select [items]="itemsFilters[header.attr]" bindLabel="label" bindValue="value"
+                        [multiple]="header.multiple ? header.multiple : false"
+                        (change)="onChangeFilter(header.attr, $event)">
+                    </ng-select>
+                </div>
+            </th>
+        </tr>
+    </thead>
+    <tbody class="ngx-table-body">
+        <tr *ngFor="let item of data">
+            <td *ngFor="let body of options">
+                {{ item[body.attr] }}
+            </td>
+        </tr>
+    </tbody>
+</table>
