@@ -8,5 +8,10 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false, 
+  "author": {
+    "name": "David Segura",
+    "email": "wolf.arges@gmail.com",
+    "url": "https://github.com/DavidSegura/ngx-table-filter"
+  }
 }
