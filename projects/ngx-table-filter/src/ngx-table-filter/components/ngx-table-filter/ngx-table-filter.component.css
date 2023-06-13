@@ -30,6 +30,7 @@ table.ngx-table-filter>thead.ngx-table-header tr th {
     padding-top: 18px;
     font-weight: 600;
     padding-right: 10px;
+    padding-bottom: 10px;
 }
 
 table.ngx-table-filter>thead.ngx-table-header tr th:first-child {
@@ -60,7 +61,7 @@ table.ngx-table-filter tbody.ngx-table-body tr:hover {
 
 .ngx-table-export {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     width: 100%;
     align-items: center;
     padding: .5rem 0;

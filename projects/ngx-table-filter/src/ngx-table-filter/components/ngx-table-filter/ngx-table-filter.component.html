@@ -8,7 +8,7 @@
         <tr>
             <th *ngFor="let header of options">
                 {{ header.label }}
-                <div *ngIf="header.showFilter">
+                <div *ngIf="header.showFilter && data.length">
                     <ng-select [items]="itemsFilters[header.attr]" bindLabel="label" bindValue="value"
                         [multiple]="header.multiple ? header.multiple : false"
                         (change)="onChangeFilter(header.attr, $event)"
@@ -24,6 +24,9 @@
             <td *ngFor="let body of options">
                 {{ item[body.attr] }}
             </td>
+        </tr>
+        <tr *ngIf="data.length == 0">
+            <td [attr.colspan]="options.length">{{ 'No hay datos...' }}</td>
         </tr>
     </tbody>
 </table>

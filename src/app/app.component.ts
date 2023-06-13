@@ -16,6 +16,8 @@ export class AppComponent {
     { id: 5, contructor_site_name: "RLE", waster_center_name: "Plantas Pedro" }
   ];
 
+/*   public data = []; */
+
   public options: INgxTableOptions = [
     {
       label: "Id",
